@@ -1,4 +1,4 @@
-import { Play, Video, Users } from "lucide-react"
+import { Play, Video, Users, ExternalLink } from "lucide-react"
 
 export function AIRealismSlide() {
   return (
@@ -44,7 +44,7 @@ export function AIRealismSlide() {
                 OpenAI's Sora 2 creates videos so realistic you can't tell they're AI-generated. People, places, and
                 events that never existed look completely real.
               </p>
-              <div className="space-y-1 text-xs md:text-sm">
+              <div className="space-y-1 text-xs md:text-sm mb-3">
                 <p className="flex items-start gap-2">
                   <span className="text-purple-500 mt-0.5">•</span>
                   <span>Anyone can create professional-quality videos without cameras or actors</span>
@@ -58,6 +58,15 @@ export function AIRealismSlide() {
                   <span>Video production jobs are at serious risk</span>
                 </p>
               </div>
+              <a
+                href="https://openai.com/index/sora-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs md:text-sm text-purple-500 hover:text-purple-400 transition-colors font-medium"
+              >
+                <ExternalLink className="w-3 h-3 md:w-4 md:h-4" />
+                Learn more about Sora 2 on OpenAI
+              </a>
             </div>
 
             {/* AI Social Media */}
