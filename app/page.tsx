@@ -99,18 +99,18 @@ export default function Presentation() {
       </div>
 
       {/* Navigation Controls */}
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 z-50">
+      <div className="fixed bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 md:gap-4 z-50">
         <Button
           variant="outline"
           size="icon"
           onClick={prevSlide}
           disabled={currentSlide === 0}
-          className="bg-card/80 backdrop-blur-sm hover:bg-card"
+          className="bg-card/80 backdrop-blur-sm hover:bg-card h-8 w-8 md:h-10 md:w-10"
         >
-          <ChevronLeft className="h-5 w-5" />
+          <ChevronLeft className="h-4 w-4 md:h-5 md:w-5" />
         </Button>
 
-        <div className="bg-card/80 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium">
+        <div className="bg-card/80 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium">
           {currentSlide + 1} / {slides.length}
         </div>
 
@@ -119,9 +119,9 @@ export default function Presentation() {
           size="icon"
           onClick={nextSlide}
           disabled={currentSlide === slides.length - 1}
-          className="bg-card/80 backdrop-blur-sm hover:bg-card"
+          className="bg-card/80 backdrop-blur-sm hover:bg-card h-8 w-8 md:h-10 md:w-10"
         >
-          <ChevronRight className="h-5 w-5" />
+          <ChevronRight className="h-4 w-4 md:h-5 md:w-5" />
         </Button>
       </div>
 
@@ -130,21 +130,21 @@ export default function Presentation() {
         variant="outline"
         size="icon"
         onClick={() => setShowMenu(!showMenu)}
-        className="fixed top-8 right-8 z-50 bg-card/80 backdrop-blur-sm hover:bg-card"
+        className="fixed top-4 md:top-8 right-4 md:right-8 z-50 bg-card/80 backdrop-blur-sm hover:bg-card h-8 w-8 md:h-10 md:w-10"
       >
-        <Menu className="h-5 w-5" />
+        <Menu className="h-4 w-4 md:h-5 md:w-5" />
       </Button>
 
       {/* Slide Menu */}
       {showMenu && (
-        <div className="fixed top-20 right-8 bg-card/95 backdrop-blur-sm border rounded-lg p-4 z-50 max-h-[70vh] overflow-y-auto w-64">
-          <h3 className="font-semibold mb-3 text-sm">Jump to Slide</h3>
+        <div className="fixed top-14 md:top-20 right-4 md:right-8 bg-card/95 backdrop-blur-sm border rounded-lg p-3 md:p-4 z-50 max-h-[60vh] md:max-h-[70vh] overflow-y-auto w-56 md:w-64">
+          <h3 className="font-semibold mb-2 md:mb-3 text-xs md:text-sm">Jump to Slide</h3>
           <div className="space-y-1">
             {slides.map((slide, index) => (
               <button
                 key={slide.id}
                 onClick={() => goToSlide(index)}
-                className={`w-full text-left px-3 py-2 rounded text-sm transition-colors ${
+                className={`w-full text-left px-2 md:px-3 py-1.5 md:py-2 rounded text-xs md:text-sm transition-colors ${
                   currentSlide === index ? "bg-primary text-primary-foreground" : "hover:bg-muted"
                 }`}
               >

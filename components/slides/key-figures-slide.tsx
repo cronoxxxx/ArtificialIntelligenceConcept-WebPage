@@ -43,40 +43,40 @@ export function KeyFiguresSlide() {
   ]
 
   return (
-    <div className="h-full w-full flex items-center justify-center p-16 bg-gradient-to-br from-background via-accent/5 to-background overflow-y-auto">
-      <div className="max-w-6xl w-full py-8">
-        <h2 className="text-5xl font-bold mb-6 text-center">The Pioneers of Modern AI</h2>
-        <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+    <div className="h-full w-full flex items-center justify-center p-4 md:p-16 bg-gradient-to-br from-background via-accent/5 to-background overflow-y-auto">
+      <div className="max-w-6xl w-full py-4 md:py-8">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-center">The Pioneers of Modern AI</h2>
+        <p className="text-base md:text-xl text-center text-muted-foreground mb-6 md:mb-12 max-w-3xl mx-auto">
           These visionaries and their teams turned AI from science fiction into reality. Their competition and
           collaboration shaped the AI tools you use today.
         </p>
 
-        <div className="grid grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
           {pioneers.map((pioneer, index) => (
-            <div key={index} className="bg-card border rounded-xl p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-start gap-4 mb-4">
+            <div key={index} className="bg-card border rounded-xl p-4 md:p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
                 <img
                   src={pioneer.photo || "/placeholder.svg"}
                   alt={pioneer.name}
-                  className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-2 border-primary/20"
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0 border-2 border-primary/20"
                 />
                 <div>
-                  <h4 className="text-xl font-bold">{pioneer.name}</h4>
-                  <p className="text-sm text-muted-foreground">{pioneer.role}</p>
+                  <h4 className="text-lg md:text-xl font-bold">{pioneer.name}</h4>
+                  <p className="text-xs md:text-sm text-muted-foreground">{pioneer.role}</p>
                   <p className="text-xs text-muted-foreground mt-1 italic">{pioneer.team}</p>
                 </div>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2 md:space-y-3">
                 <div>
-                  <p className="text-sm font-semibold text-primary mb-1">What they built:</p>
-                  <p className="text-sm">{pioneer.contribution}</p>
+                  <p className="text-xs md:text-sm font-semibold text-primary mb-1">What they built:</p>
+                  <p className="text-xs md:text-sm">{pioneer.contribution}</p>
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-secondary mb-1">Their impact:</p>
-                  <p className="text-sm">{pioneer.impact}</p>
+                  <p className="text-xs md:text-sm font-semibold text-secondary mb-1">Their impact:</p>
+                  <p className="text-xs md:text-sm">{pioneer.impact}</p>
                 </div>
                 <div className="pt-2 border-t border-border">
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs">
                     <span className="font-semibold text-foreground">Key achievement:</span> {pioneer.achievement}
                   </p>
                 </div>
@@ -85,8 +85,8 @@ export function KeyFiguresSlide() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-primary/10 to-accent/10 border rounded-xl p-6">
-          <p className="text-lg text-center">
+        <div className="bg-gradient-to-br from-primary/10 to-accent/10 border rounded-xl p-4 md:p-6">
+          <p className="text-sm md:text-lg text-center">
             <span className="font-bold">Their victory sparked a new era:</span> These pioneers' breakthroughs led to an
             explosion of AI companies competing to build the best AI tools—from ChatGPT to Claude, Gemini to Grok, and
             many more emerging every month.
