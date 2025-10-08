@@ -1,12 +1,12 @@
 export function AdditionalResourcesSlide() {
   return (
-    <div className="h-full w-full bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 p-12 flex flex-col">
-      <h1 className="text-4xl font-bold mb-6 text-emerald-900">Additional Resources</h1>
+    <div className="h-full w-full bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 p-4 md:p-12 flex flex-col overflow-y-auto">
+      <h1 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-emerald-900">Additional Resources</h1>
 
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
         <div className="lg:col-span-2 space-y-4">
-          <h2 className="text-2xl font-semibold text-emerald-800">Learn More About AI</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <h2 className="text-xl md:text-2xl font-semibold text-emerald-800">Learn More About AI</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Video 1: YouTube */}
             <div className="aspect-video rounded-lg overflow-hidden shadow-md bg-black">
               <iframe
@@ -63,7 +63,7 @@ export function AdditionalResourcesSlide() {
         </div>
 
         {/* Perplexity Pro Offer Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg flex flex-col">
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-lg flex flex-col">
           <div className="flex items-center gap-4 mb-4">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-t6eUqFFnNGeH89OJn0vleGfitr0pV4.png"
@@ -122,7 +122,7 @@ export function AdditionalResourcesSlide() {
         </div>
       </div>
 
-      <div className="mt-6 text-center text-sm text-emerald-700">
+      <div className="mt-4 md:mt-6 text-center text-xs md:text-sm text-emerald-700">
         <p>Take advantage of these resources to continue your AI learning journey!</p>
       </div>
     </div>
