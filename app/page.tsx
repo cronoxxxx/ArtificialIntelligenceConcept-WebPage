@@ -25,9 +25,10 @@ import { AIRaceDynamicsSlide } from "@/components/slides/ai-race-dynamics-slide"
 import { MultimediaAISlide } from "@/components/slides/multimedia-ai-slide"
 import { JobImpactSlide } from "@/components/slides/job-impact-slide"
 import { IndustriesAffectedSlide } from "@/components/slides/industries-affected-slide"
-import { AIRealismSlide } from "@/components/slides/ai-realism-slide" // Fixed import to use correct component
+import { AIRealismSlide } from "@/components/slides/ai-realism-slide"
 import { WhatYouNeedToKnowSlide } from "@/components/slides/what-you-need-to-know-slide"
 import { ClosingSlide } from "@/components/slides/closing-slide"
+import { AdditionalResourcesSlide } from "@/components/slides/additional-resources-slide"
 
 const slides = [
   { id: 0, component: TitleSlide },
@@ -52,9 +53,10 @@ const slides = [
   { id: 19, component: MultimediaAISlide },
   { id: 20, component: JobImpactSlide },
   { id: 21, component: IndustriesAffectedSlide },
-  { id: 22, component: AIRealismSlide }, // Using correct component name
+  { id: 22, component: AIRealismSlide },
   { id: 23, component: WhatYouNeedToKnowSlide },
   { id: 24, component: ClosingSlide },
+  { id: 25, component: AdditionalResourcesSlide },
 ]
 
 export default function Presentation() {
@@ -182,9 +184,10 @@ function getSlideTitle(index: number): string {
     "Multimedia AI",
     "Impact on Jobs",
     "Industries Affected",
-    "AI Realism", // Updated title for video slide
+    "AI Realism",
     "Jobs Least Affected",
     "Closing",
+    "Additional Resources",
   ]
   return titles[index] || `Slide ${index + 1}`
 }
